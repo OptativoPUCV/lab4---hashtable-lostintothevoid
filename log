@@ -2,3 +2,18 @@ Fri 14 Apr 2023 12:44:06 AM UTC:
  tests:  0|6
 total_score: 0/70
 7a96c63
+Thu 20 Apr 2023 11:46:08 PM UTC: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:16: error: ‘*temp->buckets’ is a pointer; did you mean to use ‘->’?
+   56 |   temp->buckets->key=NULL;
+      |                ^~
+      |                ->
+hashmap.c:57:16: error: ‘*temp->buckets’ is a pointer; did you mean to use ‘->’?
+   57 |   temp->buckets->value=NULL;
+      |                ^~
+      |                ->
+Compilation failed
+5d6b854
