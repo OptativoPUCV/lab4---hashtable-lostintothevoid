@@ -22,3 +22,51 @@ Sun 04 Jun 2023 07:26:49 PM UTC:
  1 file changed, 2 insertions(+), 3 deletions(-)
  tests:  0|0
 071be81
+Sun 04 Jun 2023 07:40:41 PM UTC: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:46: error: expected ‘)’ before ‘;’ token
+   56 |   Pair* pairtemp=(Pair*) malloc(sizeof(Pair*);
+      |                                ~             ^
+      |                                              )
+hashmap.c:65:1: error: expected ‘,’ or ‘;’ before ‘}’ token
+   65 | }
+      | ^
+test.c:453:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  453 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:511:1: error: expected declaration or statement at end of input
+  511 | }
+      | ^
+In file included from test.c:4:
+hashmap.c:56:9: error: unused variable ‘pairtemp’ [-Werror=unused-variable]
+   56 |   Pair* pairtemp=(Pair*) malloc(sizeof(Pair*);
+      |         ^~~~~~~~
+hashmap.c:55:12: error: unused variable ‘temp’ [-Werror=unused-variable]
+   55 |   HashMap* temp= (HashMap*) malloc(sizeof( HashMap*)*capacity);
+      |            ^~~~
+test.c:512: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:453:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  453 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:217:5: error: ‘insert_test5’ defined but not used [-Werror=unused-function]
+  217 | int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+      |     ^~~~~~~~~~~~
+test.c:131:6: error: ‘compare_test’ defined but not used [-Werror=unused-function]
+  131 | void compare_test(){
+      |      ^~~~~~~~~~~~
+test.c:125:6: error: ‘hash_test3’ defined but not used [-Werror=unused-function]
+  125 | void hash_test3(){ //no random
+      |      ^~~~~~~~~~
+test.c:111:6: error: ‘hash_test2’ defined but not used [-Werror=unused-function]
+  111 | void hash_test2(){ // colisiones
+      |      ^~~~~~~~~~
+test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-function]
+  100 | void hash_test1(){ // posición válida
+      |      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+560c78f
