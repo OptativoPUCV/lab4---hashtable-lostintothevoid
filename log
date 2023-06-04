@@ -17,3 +17,8 @@ hashmap.c:57:16: error: ‘*temp->buckets’ is a pointer; did you mean to use �
       |                ->
 Compilation failed
 5d6b854
+Sun 04 Jun 2023 07:26:49 PM UTC: 
+ hashmap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+ tests:  0|0
+071be81
